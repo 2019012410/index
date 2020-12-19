@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="css/zhuce.css">
+    <style>
+    *{
+            padding: 0;
+            margin: 0;
+     }
+     #content-form-signup{
+        text-align: center;
+        background-color: red;
+        color: #fff;
+        width:302px;
+        margin: 0px;
+        padding: 0px;
+        border: 10px;
+        height:40px;
+        position: relative;
+     }
+     #user{
+        width:205px;
+        top:12px;
+        border: 0px;
+        bottom: 1px;
+        font-size: 3px;
+        float:right;
+        display: inline-block;
+        position: relative;
+        right:30px;
+        outline: none;
+     }
+    #password{
+        width:205px;
+        top:12px;
+        border: 0px;
+        bottom: 1px;
+        font-size: 3px;
+        float:right;
+        display: inline-block;
+        position: relative;
+        right:30px;
+        outline: none;
+     }
+     #content-form{
+        width: 500px;
+        height:104px;
+        border: 0px solid green;
+        padding-left:540px;
+        padding-top: 250px;
+        margin: 0px;
+     }
+     #blank{
+        font-size:15px; 
+        float:left;
+        display: inline-block;
+        position:relative;
+        top:10px;
+     }
+    #blank_2{
+        font-size:13.5px; 
+        float:left;
+        display: inline-block;
+        position:relative;
+        top:10px;
+     }
+    #change_margin_1{
+        width:300px;
+        height:40px;
+        border:1px solid;
+    }
+    #change_margin_2{
+        width:300px;
+        height:40px;
+        border:1px solid;
+    }
+    #div1{
+        color: grey;
+        font-size: 1px;
+        height:20px;
+    }
+    #div2{
+        color: grey;
+        font-size:1px;
+        height:20px;
+    }
+    li{
+        list-style-type:none;
+        position: relative;
+        left: 400px;
+        height: 50px;
+        bottom: 190px;
+        color:red;
+        margin:20px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header-line"></div>
+    </header>
+    <div class="content">
+        <h1 class="content-title"></h1>
+        <div id="content-form"> 
+                <div id="change_margin_1">
+                    
+                    <p id="blank">用 户 名</p>
+                       <input ID="user" type="text" name="user" >
+                   
+                </div>
+                <!-- input的value为空时弹出提醒 -->
+                <p id="div1" ></p>
+                <div id="change_margin_2">
+                    
+                    <p id="blank_2">设置密码</p>
+                    <input ID="password" type="password" name="password" ">
+                    
+                </div>
+                <!-- input的value为空时弹出提醒 -->
+                <p id="div2"></p>
+                <div id="change_margin_3">
+                    <input id="content-form-signup" type="submit" value="立即注册">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+<script >
+    var m=0;
+    var a1=document.getElementById('user');
+    var a2=document.getElementById('password');
+    var b1=document.getElementById('div1');
+    var b2=document.getElementById('div2');
+    var res=document.getElementById('content-form-signup');
+    var list=document.getElementsByTagName('li');
+    a1.onclick=function(){
+            b1.innerHTML="支持中文数字";
+        }
+    a1.onblur=function(){
+        if(this.value){
+            b1.innerHTML=" ";
+        }
+        else{
+            b1.innerHTML="用户名不能为空";
+        }    
+    }
+    a2.onclick=function(){
+            b2.innerHTML="建议至少使用两种字符组合";
+    }
+    a2.onblur=function(){
+        if(this.value){
+            b2.innerHTML=" ";
+        }
+        else{
+            b2.innerHTML="密码不能为空";
+        }
+
+    }
+   
+
+    res.onclick=function(){
+         setTimeout(function () {
+            window.open("Web2.html")
+        }, 100);
+         alert("注册成功！已自动登陆！"+"\n"+"用户名："+a1.value+"\n"+"密码："+a2.value+"\n"+"点击“确定”跳转");
+
+    }
+</script>
+</body>
+</html>

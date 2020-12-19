@@ -1,0 +1,236 @@
+/*
+* @Author: 小黑E550
+* @Date:   2018-08-21 09:36:28
+* @Last Modified by:   小黑E550
+* @Last Modified time: 2018-08-21 15:57:07
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.box{
+	width: 1200px;
+	height: 397px;
+	border: 1px solid red;
+	margin: 100px auto;
+	position: relative;
+	overflow: hidden;
+}
+.slider{
+	width: 8400px;
+	position: absolute;
+	left: -1200px;
+}
+.slide{
+	width: 1200px;
+	overflow: hidden;
+	float: left;
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	top: 175px;
+	line-height: 50px;
+	background: rgb(255,0,0);
+	font-size: 30px;
+	position: absolute;
+	/* display: none; */
+	opacity: 0;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+.nav{
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
+}
+.nav>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+.nav .active{
+	background: red;
+}
+ .grid{display:flex;flex-direction:row;}
+    .grid_cell_1{flex-basis:0;flex-grow:1;}
+    .grid_cell_2{flex-basis:0;flex-grow:2;}
+    .grid_cell_3{flex-basis:0;flex-grow:3;}
+
+.clear:after{
+    content:"";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.hqq1{
+    height: 45px;
+    background-color: #333;
+}
+.hqq2{
+    width: 1200px;
+    height: 45px;
+    margin: 0 auto;
+}
+.hqq2 p{
+    float: right;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+}
+.hqq2 span{
+    font-size: 20px;
+    margin-right: 28px;
+}
+.hqq2 img{
+    margin:10px 12px 0 0; 
+    float: left;
+    height:35px;
+}
+.hqq2 a{
+    color: #fff;
+    font-size: 14px;
+    margin: 0px 14px 0;
+}
+.na{
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+}
+.na img{
+    margin-top: 12px;
+    width:400px;
+    height: 60px;
+}
+.na p{
+    float: left;
+    line-height: 80px;
+}
+.na p a{
+    color: #000;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    width: 100px;
+    height: 76px;
+}
+.na p a:hover{
+    color: #e8420a;
+    border-bottom: 4px solid #e8420a;
+}
+.grid_cell_3{flex-basis:0;
+    flex-grow:3;
+    float:right ;
+    margin: 25px;
+
+}
+.grid_cell_3 img {
+    width: 1400px;
+    float: right;
+}
+.mqq1{
+    height: 724px;
+    background-color: #f5f5f5;
+}
+.mqq2{
+    width: 1200px;
+    height: 724px;
+    margin: 0 auto;
+}
+.cii{
+    line-height: 97px;
+}
+.cii a{
+    font-size: 18px;
+    color: #333;
+}
+.hotal{
+    height: 545px;
+    padding: 15px;
+    background-color: #fff;
+}
+.hotal-left{
+    float: left;
+}
+.ppmg li{
+    float: left;
+    margin-left: 4px;
+}
+.ppmg li:first-child{
+    margin-left: 0;
+}
+.ppmg img{
+    width: 150px;
+    height: 100px;
+}
+.hotal-right{
+    width: 465px;
+    float: right;
+}
+.hotal-right h3{
+    font-size: 30px;
+    line-height: 94px;
+}
+.hotal-right p{
+    font-size: 20px;
+    line-height: 40px;
+    color: #666;
+}
+.ix{
+    width: 62px;
+    height: 390px;
+    position: fixed;
+    right: 0;
+    top: 130px;
+}
+.ix li{
+    background-color: #1c5080;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 2px;
+     color: #fff;
+}
+.ix img{
+    margin-top: 9px;
+}
+.ix li:last-child{
+    height: 150px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #e8420a;
+} 
+.assd img{
+    height:400px;
+    width:610px;
+    
+}
+.footer {
+      height: 60px;
+      line-height: 60px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+ .weather{
+ 	height: 5px;
+ 	left:;
+ }
+ #top{
+ 	height:220px ;
+ 	color: white;
+ }  

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>carousel</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="animate.js"></script>
+</head>
+<body>
+<body>
+    <div class="hqq1">
+        <div class="hqq2">
+
+            <p>
+                <span>
+                    <img alt="" src="imgs\phone.png">
+                    400-808-8682
+                </span>
+                <a href="Web.html">退出登录</a>
+                <a href="zhuce.html">欢迎回来</a>
+            </p>
+        </div>
+    </div>
+  
+
+
+     <div class="na">
+        <img alt="" src="imgs\logo.png">
+        <p>
+            <a href="#">首页</a>
+            <a href="#">目的地</a>
+        </p>
+        <li class=" grid_cell_3">
+                <input name="name" style="width :200px;height :30px;border :0;border :1px solid #0094ff; border-radius :10px;" type="text" placeholder=" 搜索关键字" value="">
+                <input name="name" style="background-color :#0094ff; width :60px;height :30px;border :0;font-size :18px; border :1px solid #0094ff;color :#ffffff; border-radius :10px;" type="button" value="搜索">
+            </li>
+
+    </div>
+    <div class="weather">
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3" marginheight="30px"></iframe>
+</div>
+
+     
+	<div class="box" id="box">
+		<div class="slider" id="slider">
+			<div class="slide"><img src="imgs/banner_04.jpg" alt=""></div>
+			<div class="slide"><img src="imgs/banner_05.png" alt=""></div>
+			<div class="slide"><img src="imgs/banner_02.jpg" alt=""></div>
+			<div class="slide"><img src="imgs/banner_04.jpg" alt=""></div>
+			<div class="slide"><img src="imgs/banner_03.jpg" alt=""></div>
+			<div class="slide"><img src="imgs/banner_01.jpg" alt=""></div>
+			<div class="slide"><img src="imgs/banner_05.png" alt=""></div>
+		</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	 <div class="mqq1">
+        <div class="mqq2">
+            <p class="cii">
+                <a href="">首页</a> &gt;
+                <a href="">美景欣赏</a> &gt;
+                <a href="">昆明介绍</a>
+            </p>
+            <div class="hotal">
+                <div class="hotal-left">
+                <div class=assd>
+                    <img alt="" src="imgs\big.jpg">
+                </div>
+                    <ul class="ppmg">
+                        <li>
+                            <img alt="" src="imgs\s1.jpg">
+                        </li>
+                        <li>
+                            <img alt="" src="imgs\s2.jpg">
+                        </li>
+                        <li>
+                            <img alt="" src="imgs\s3.jpg">
+                        </li>
+                        <li>
+                            <img alt="" src="imgs\s4.jpg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="hotal-right">
+                    <h3>昆明</h3>
+                    <p>昆明作为云南的省会，虽然没有丽江、大理那么出名，却也有它独特的韵味。很多人来到云南的第一站就是这里。既然来了，不妨在这里停留一两天，感受一下它的魅力。昆明有很多值得一去的地方，最为外人所道也的莫过于滇池风景区和石林风景区了。我们去的是滇池风景区，也就是海埂公园。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <ul class="ix">
+        <li class=>
+            <img alt="" src="">
+            <br><br>
+        </li>
+        <li>
+            <img alt="" src="">
+            <br><br>
+        </li>
+        <li>
+            <img alt="" src="">
+            <br><br>
+        </li>
+        <li>
+            <img alt="" src="">
+            <br><br>
+        </li>
+        <li onclick="goTop()">
+            <img alt="" src="imgs/img2.png"><br>
+            回<br>到<br>顶<br>部
+        </li>
+    </ul>
+    
+    <div class="footer">
+    苏ICP备000号、2014-2017 版权所有
+  </div>
+	<script>
+		var box = document.getElementById('box');
+		var oNavlist = document.getElementById('nav').children;
+		var slider = document.getElementById('slider');
+		var left = document.getElementById('left');
+		var right = document.getElementById('right');
+		var index = 1;
+		var timer;
+		var isMoving = false;
+		box.onmouseover = function(){
+			animate(left,{opacity:50})
+			animate(right,{opacity:50})
+			clearInterval(timer)
+		}
+		box.onmouseout = function(){
+			animate(left,{opacity:0})
+			animate(right,{opacity:0})
+			timer = setInterval(next, 3000);
+		}
+		right.onclick = next;
+		left.onclick = prev;
+		for( var i=0; i<oNavlist.length; i++ ){
+			oNavlist[i].index = i;
+			oNavlist[i].onclick = function(){
+				index = this.index+1;
+				navmove();
+				animate(slider,{left:-1200*index});
+			}
+		}
+		function next(){
+			if(isMoving){
+				return;
+			}
+			isMoving = true;
+			index++;
+			navmove();
+			animate(slider,{left:-1200*index},function(){
+				if(index==6){
+					slider.style.left = '-1200px';
+					index = 1;
+				}
+				isMoving = false;
+			});
+		}
+		function prev(){
+			if(isMoving){
+				return;
+			}
+			isMoving = true;
+			index--;
+			navmove();
+			animate(slider,{left:-1200*index},function(){
+				if(index==0){
+					slider.style.left = '-6000px';
+					index = 5;
+				}
+				isMoving = false;
+			});
+		}
+		function navmove(){
+			for( var i=0; i<oNavlist.length; i++ ){
+				oNavlist[i].className = "";
+			}
+			if(index >5 ){
+				oNavlist[0].className = "active";
+			}else if(index<=0){
+				oNavlist[4].className = "active";
+			}else {
+				oNavlist[index-1].className = "active";
+			}
+		}
+		timer = setInterval(next, 3000);
+		function goTop(){
+			var odiv = document.getElementById("top");
+			
+			document.documentElement.scrollTop = document.body.scrollTop = 0;
+		}
+
+		window.onscroll = function(){
+			var odiv = document.getElementById("top");
+			
+			
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			
+			
+			if(scrollTop > 2000){	
+				odiv.style.display = "block";
+			} else {
+				odiv.style.display = "none"
+			}
+		}
+
+	</script>
+</body>
+</html>
